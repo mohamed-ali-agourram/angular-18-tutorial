@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-roles',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './roles.component.html'
 })
 export class RolesComponent {
-  firstName: string = "Angular Tutorial"
+  role: string = '';
+  state: string = '';
+
+  showWelcomeAlert(e: Event) {
+    e.preventDefault();
+    alert(`Role: ${this.role}, State: ${this.state}`);
+  }
 }

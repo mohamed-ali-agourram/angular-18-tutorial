@@ -86,3 +86,59 @@ ng update @angular/core @angular/cli
 ## APIS ARE USED FROM
 
 [freeapis.miniprojectideas](https://freeapi.miniprojectideas.com/index.html)
+
+### Data Binding in Angular
+
+In Angular, the way of binding data using the NgModule system is referred to as **data binding**. It can be categorized as follows:
+
+- **Data Binding**: The general term for the communication between the component and the view (template).
+  
+- **One-Way Data Binding**: This includes both interpolation and property binding, where data flows in one direction (from the component to the view).
+  
+- **Two-Way Data Binding**: This allows for data to flow in both directions (between the component and the view).
+
+#### Types of Data Binding
+
+1. **Interpolation**: 
+   - A one-way data binding technique that allows you to display component properties in the template using the syntax `{{ }}`.
+
+2. **Property Binding**: 
+   - Binds a property of a DOM element to a property in the component class.
+
+3. **Event Binding**: 
+   - Allows you to listen to events (like clicks) on DOM elements and execute methods in the component class in response.
+
+4. **Two-Way Data Binding**: 
+   - A combination of property and event binding that allows for automatic synchronization of data between the component and the view, commonly implemented using `[(ngModel)]`.
+
+5. **Event Binding**: 
+   - Allows you to listen to events (like clicks) on DOM elements and execute methods in the component class in response.
+   - **Syntax**: Uses parentheses (`( )`) around the event name.
+   - **Example**: 
+     ```html
+     <button (click)="onButtonClick()">Click Me!</button>
+     ```
+   - In the component:
+     ```typescript
+     onButtonClick() {
+         console.log('Button was clicked!');
+     }
+     ```
+     In Angular, `$event` represents the **event object** associated with a particular user interaction, such as a click, input, or form submission. You can access this object inside your component methods to:
+      - Inspect the event details (like target elements).
+      - Use event methods such as `preventDefault()` or `stopPropagation()`.
+      ``` typescript
+        export class RolesComponent {
+          role: string = '';
+          state: string = '';
+
+          showWelcomeAlert(e: Event) {
+            e.preventDefault();
+            alert(`Role: ${this.role}, State: ${this.state}`);
+          }
+        }
+      ```
+      ``` html
+        <button class="border rounded p-2" (click)="showWelcomeAlert($event)">Click</button>
+      ```
+   - **Common Use Cases**: Event binding is typically used for user interactions, such as clicks, key presses, mouse movements, and form submissions. It allows you to define what happens in response to these actions, making your application interactive and responsive to user inputs.

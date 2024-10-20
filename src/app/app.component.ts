@@ -6,9 +6,7 @@ import { RolesComponent } from './components/roles/roles.component';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, RolesComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'angular-18-tutorial';
 }
