@@ -60,6 +60,7 @@ ng update @angular/core @angular/cli
 ---
 
 ## 4. Project Structure Overview  
+``` bash
 .
 ├── node_modules/
 ├── README.md
@@ -79,4 +80,4 @@ ng update @angular/core @angular/cli
 ├── tsconfig.app.json           # TypeScript configuration for the app (excluding tests)
 ├── tsconfig.json               # General TypeScript configuration
 └── tsconfig.spec.json          # TypeScript configuration for unit tests
-
+```
