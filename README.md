@@ -44,6 +44,8 @@ ng serve
 ng generate component component-name
 # or
 ng g c component-name
+# skip styles / test / html
+ng generate component component-name --style none --skip-tests --inline-template
 ```
 ### Add a Service  
 ``` Bash
@@ -81,3 +83,6 @@ ng update @angular/core @angular/cli
 ├── tsconfig.json               # General TypeScript configuration
 └── tsconfig.spec.json          # TypeScript configuration for unit tests
 ```
+## APIS ARE USED FROM
+
+[freeapis.miniprojectideas](https://freeapi.miniprojectideas.com/index.html)

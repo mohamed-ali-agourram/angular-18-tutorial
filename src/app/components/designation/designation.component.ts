@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-designation',
   standalone: true,
   imports: [],
-  templateUrl: './designation.component.html',
-  styleUrl: './designation.component.css'
+  templateUrl: './designation.component.html'
 })
 export class DesignationComponent {
 

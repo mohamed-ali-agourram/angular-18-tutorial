@@ -4,9 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-roles',
   standalone: true,
   imports: [],
-  templateUrl: './roles.component.html',
-  styleUrl: './roles.component.css'
+  templateUrl: './roles.component.html'
 })
 export class RolesComponent {
-
+  firstName: string = "Angular Tutorial"
 }
