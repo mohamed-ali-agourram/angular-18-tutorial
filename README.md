@@ -1,27 +1,98 @@
-# Angular 18 Tutorial
+# Angular 18
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+## 1. Installation  
+To install Angular CLI globally, use the following command:  
 
-## Development server
+``` Bash
+npm install -g @angular/cli@18
+```
+Verify the installation:  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+``` Bash
+ng version
+```
+---
 
-## Code scaffolding
+## 2. Creating a New Project  
+To create a new Angular project with standalone components:  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+``` Bash
+ng new my-angular-app --standalone
+```
+Navigate to the project directory:  
 
-## Build
+``` Bash
+cd my-angular-app
+```
+Serve the application locally:  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+``` Bash
+ng serve
+```
+Open your browser and visit `http://localhost:4200` to see your application.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 3. Common Angular CLI Commands  
 
-## Running end-to-end tests
+### Start the Development Server  
+``` Bash
+ng serve
+```
+### Generate a Component  
+``` Bash
+ng generate component component-name
+# or
+ng g c component-name
+```
+### Add a Service  
+``` Bash
+ng generate service service-name
+```
+### Build the Project for Production  
+``` Bash
+ng build --prod
+```
+### Update Angular Dependencies  
+``` Bash
+ng update @angular/core @angular/cli
+```
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 4. Project Structure Overview  
+.
+├── node_modules
+├── README.md
+├── angular.json
+│ Angular CLI’s main configuration file. It defines build options, server configurations, asset handling, and more. Changes here control how the app behaves during development and production builds.
+│
+├── src/
+│   ├── app/
+│   │   ├── app.component.css
+│   │   │ Component-specific CSS for the root component. Keeps styles encapsulated to avoid conflicts.
+│   │   ├── app.component.html
+│   │   │ HTML template defining the root component’s structure. This serves as the main UI entry point.
+│   │   ├── app.component.spec.ts
+│   │   │ Unit test file for the root component. Ensures the component behaves as expected through tests.
+│   │   ├── app.component.ts
+│   │   │ The logic of the root component, managing the app’s core state and behavior.
+│   │   ├── app.config.ts
+│   │   │ Configuration settings for the app, such as feature flags or environment-specific variables.
+│   │   └── app.routes.ts
+│   │ Defines the routes for the app. Manages navigation between pages or components.
+│   ├── index.html
+│   │ The entry HTML file. It loads the Angular app by referencing the necessary scripts and styles.
+│   ├── main.ts
+│   │ The main entry point for bootstrapping the Angular application. It initializes the root component.
+│   └── styles.css
+│ Global styles for the entire application. These styles apply across all components unless overridden.
+│
+├── tsconfig.app.json
+│ TypeScript configuration specific to the app (excluding tests). Controls how the code is compiled.
+│
+├── tsconfig.json
+│ General TypeScript configuration, defining module resolution, compiler options, and more.
+│
+└── tsconfig.spec.json
+TypeScript configuration for unit tests. Ensures test files are compiled properly with the necessary settings.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
